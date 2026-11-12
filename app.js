@@ -7984,8 +7984,8 @@ document.addEventListener('click',e=>{ if(e.target.closest&&e.target.closest('#k
       if(a==='del'){ if(x.dataset.sure){ await borrar(); delete x.dataset.sure; x.textContent=L('Borrar mis datos de la nube','Ezabatu nire datuak hodeitik'); } else { x.dataset.sure='1'; x.textContent=L('Pulsa otra vez para confirmar','Sakatu berriro baieztatzeko'); } }
       if(a!=='del') m.hidden=true; }); }); }
   function priv(){ const o=document.createElement('div'); o.className='ac-pv'; o.innerHTML=`<div class="ac-pvb" role="dialog" aria-modal="true"><h3>${L('Privacidad','Pribatutasuna')}</h3>
-    ${L(`<p><b>Responsable:</b> Oier Loidi (contacto: escuelafrigoristas@gmail.com).</p><p><b>Qué se guarda:</b> si inicias sesión con Google, tu nombre, tu correo, un identificador de Google y tu progreso en el simulador (lecciones, notas y ajustes).</p><p><b>Para qué:</b> solo para guardar y recuperar tu progreso en cualquier dispositivo. No se usa para publicidad ni se comparte con nadie.</p><p><b>Base legal:</b> tu consentimiento al iniciar sesión.</p><p><b>Dónde:</b> en Google Firebase, con los datos en Europa (Madrid).</p><p><b>Cuánto tiempo:</b> hasta que borres tus datos (botón «Borrar mis datos de la nube») o lo pidas por correo.</p><p><b>Tus derechos:</b> acceso, rectificación, supresión, oposición y portabilidad, escribiendo al correo de contacto. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p><p>Sin iniciar sesión, el progreso solo se guarda en tu navegador y no sale de tu dispositivo.</p>`,
-      `<p><b>Arduraduna:</b> Oier Loidi (harremana: escuelafrigoristas@gmail.com).</p><p><b>Zer gordetzen da:</b> Google-rekin saioa hasten baduzu, zure izena, zure posta, Google-ren identifikatzaile bat eta simulagailuko zure aurrerapena (ikasgaiak, notak eta ezarpenak).</p><p><b>Zertarako:</b> zure aurrerapena edozein gailutan gordetzeko eta berreskuratzeko bakarrik. Ez da publizitaterako erabiltzen eta ez da inorekin partekatzen.</p><p><b>Oinarri juridikoa:</b> zure baimena saioa hastean.</p><p><b>Non:</b> Google Firebase-n, datuak Europan (Madril).</p><p><b>Zenbat denbora:</b> zure datuak ezabatu arte («Ezabatu nire datuak hodeitik» botoia) edo postaz eskatu arte.</p><p><b>Zure eskubideak:</b> sarbidea, zuzenketa, ezabaketa, aurkakotasuna eta eramangarritasuna, harremanetarako postara idatziz. Datuak Babesteko Espainiako Agentzian ere erreklama dezakezu (aepd.es).</p><p>Saioa hasi gabe, aurrerapena zure nabigatzailean bakarrik gordetzen da eta ez da zure gailutik ateratzen.</p>`)}
+    ${L(`<p><b>Responsable:</b> Oier Loidi (contacto: escuelafrigoristas@gmail.com).</p><p><b>Qué se guarda:</b> si inicias sesión con Google, tu nombre, tu correo, un identificador de Google y tu progreso en el simulador (lecciones, notas y ajustes).</p><p><b>Para qué:</b> solo para guardar y recuperar tu progreso en cualquier dispositivo. No se usa para publicidad ni se comparte con nadie.</p><p><b>Base legal:</b> tu consentimiento al iniciar sesión.</p><p><b>Dónde:</b> en Google Firebase, con los datos en Europa (Madrid).</p><p><b>Cuánto tiempo:</b> hasta que borres tus datos (botón «Borrar mis datos de la nube») o lo pidas por correo.</p><p><b>Tus derechos:</b> acceso, rectificación, supresión, oposición y portabilidad, escribiendo al correo de contacto. También puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p><p>Sin iniciar sesión, el progreso solo se guarda en tu navegador y no sale de tu dispositivo.</p><p><b>Estadísticas anónimas:</b> la página cuenta cuántas visitas hay y qué apartados se abren, para mejorarla. Solo se suman números: no usa cookies ni guarda quién eres.</p>`,
+      `<p><b>Arduraduna:</b> Oier Loidi (harremana: escuelafrigoristas@gmail.com).</p><p><b>Zer gordetzen da:</b> Google-rekin saioa hasten baduzu, zure izena, zure posta, Google-ren identifikatzaile bat eta simulagailuko zure aurrerapena (ikasgaiak, notak eta ezarpenak).</p><p><b>Zertarako:</b> zure aurrerapena edozein gailutan gordetzeko eta berreskuratzeko bakarrik. Ez da publizitaterako erabiltzen eta ez da inorekin partekatzen.</p><p><b>Oinarri juridikoa:</b> zure baimena saioa hastean.</p><p><b>Non:</b> Google Firebase-n, datuak Europan (Madril).</p><p><b>Zenbat denbora:</b> zure datuak ezabatu arte («Ezabatu nire datuak hodeitik» botoia) edo postaz eskatu arte.</p><p><b>Zure eskubideak:</b> sarbidea, zuzenketa, ezabaketa, aurkakotasuna eta eramangarritasuna, harremanetarako postara idatziz. Datuak Babesteko Espainiako Agentzian ere erreklama dezakezu (aepd.es).</p><p>Saioa hasi gabe, aurrerapena zure nabigatzailean bakarrik gordetzen da eta ez da zure gailutik ateratzen.</p><p><b>Estatistika anonimoak:</b> orriak zenbat bisita dauden eta zein atal irekitzen diren zenbatzen du, hobetzeko. Zenbakiak bakarrik batzen dira: ez du cookierik erabiltzen eta ez du gordetzen nor zaren.</p>`)}
     <button type="button" class="ac-x">${L('Cerrar','Itxi')}</button></div>`; document.body.appendChild(o); o.addEventListener('click',e=>{ if(e.target===o||e.target.closest('.ac-x')) o.remove(); }); }
   function toast(t){ const d=document.createElement('div'); d.className='ac-t'; d.textContent=t; document.body.appendChild(d); setTimeout(()=>d.remove(),3200); }
   document.addEventListener('click',()=>document.querySelectorAll('.ac-m').forEach(m=>m.hidden=true));
@@ -11073,6 +11073,53 @@ document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closes
     if(fig) el.insertAdjacentHTML('beforeend',`<div class="tp-phs"><p class="md-lbl">📷 ${MDL('Fotos reales','Benetako argazkiak')}</p>${fig}</div>`); mdBind(el,list);
     const has=!!(st.pic&&DR[st.pic])||!!fig, left=el.closest('.tp-left'), grid=el.closest('.tp-grid'); if(left) left.style.display=has?'':'none'; if(grid) grid.classList.toggle('tp-solo',!has);
     const dr=el.querySelector('.tr-dr'); if(dr&&!dr.innerHTML.trim()) dr.remove(); }; })();
+
+/* ===== ESTADÍSTICAS ANÓNIMAS DE USO (solo en la web publicada) =====
+   Cuenta cuántas visitas hay y qué apartados se abren, para el panel «Estado de la escuela» de Oier.
+   - Sin cookies y sin datos personales: solo se suma 1 a un contador por día y apartado (Firestore, colección «estadisticas»).
+   - «visitantes» = primera visita del día en un navegador (se recuerda la fecha en el propio navegador).
+   - Cada apartado se cuenta como mucho una vez por visita.
+   - En la versión de escritorio o sin internet no hace nada. Si el envío falla, se ignora: nunca afecta a la página.
+   Documento: estadisticas/{AAAA-MM-DD}_{clave} = { d:'AAAA-MM-DD', k:'clave', n:número }. */
+(function(){
+  const WEB_OK=(location.protocol==='https:'&&/(^|\.)github\.io$/.test(location.hostname))||(location.hostname==='localhost'&&/[?&]stats=1/.test(location.search));
+  if(!WEB_OK) return;
+  const PID='simulador-frigorifico', KEY='AIzaSyAwWXkMQpmf2upuyo365wnbrnSGQLFwF1k';
+  const DOCS='projects/'+PID+'/databases/(default)/documents', URL='https://firestore.googleapis.com/v1/'+DOCS+':commit?key='+KEY;
+  const p2=n=>String(n).padStart(2,'0'), hoy=()=>{ const d=new Date(); return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate()); };
+  const vistos=new Set(); let cola=[], timer=null;
+  function hit(k){ k=String(k||'').toLowerCase().replace(/[^a-z0-9_]/g,'_').slice(0,40); if(!k||vistos.has(k)) return; vistos.add(k); cola.push(k);
+    if(!timer) timer=setTimeout(flush,8000); }
+  function flush(){ clearTimeout(timer); timer=null; if(!cola.length) return; const d=hoy(), ks=cola; cola=[];
+    const body=JSON.stringify({writes:ks.map(k=>({update:{name:DOCS+'/estadisticas/'+d+'_'+k,fields:{d:{stringValue:d},k:{stringValue:k}}},updateMask:{fieldPaths:['d','k']},updateTransforms:[{fieldPath:'n',increment:{integerValue:'1'}}]}))});
+    try{ fetch(URL,{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true}).catch(function(){}); }catch(e){} }
+  document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='hidden') flush(); });
+  window.addEventListener('pagehide',flush);
+  // ---- visita y visitante del día
+  const G=n=>{ try{ return (0,eval)('typeof '+n+"!=='undefined'?"+n+':undefined'); }catch(e){ return undefined; } };
+  function visita(){ hit('visitas'); let ult=''; try{ ult=localStorage.getItem('sfCloudVis')||''; }catch(e){}
+    if(ult!==hoy()){ try{ localStorage.setItem('sfCloudVis',hoy()); }catch(e){}
+      hit('visitantes'); hit((matchMedia('(pointer:coarse)').matches&&Math.min(screen.width,screen.height)<800)?'movil':'ordenador');
+      hit(G('LANG')==='eu'?'idioma_eu':'idioma_es'); hit(G('NIVEL')==='pro'?'nivel_pro':'nivel_pri'); } }
+  // ---- apartados: se envuelven las funciones que los abren (si alguna no existe, se salta)
+  const wrap=(n,antes)=>{ try{ const f=G(n); if(typeof f!=='function') return; window['__st_'+n]=function(){ try{ antes.apply(null,arguments); }catch(e){} return f.apply(this,arguments); };
+      (0,eval)(n+'=window.__st_'+n); }catch(e){} };
+  wrap('enterSim',ref=>hit(ref==='freon'?'sim_freon':'sim_co2'));
+  wrap('freeOpen',k=>hit({cam:'sim_camara',ana:'ap_analizador',wire:'ap_polimetro'}[k]));
+  wrap('freeDevices',()=>hit('ap_aparatos'));
+  wrap('trStart',()=>hit('lecciones'));
+  wrap('galOpen',()=>hit('fotos'));
+  wrap('v3Show',()=>hit('sim_3d'));
+  wrap('ktOpen',()=>{ const K=G('KT'); if(K&&!K.open) hit('centro'); });
+  wrap('ktRender',()=>{ const K=G('KT'); if(K&&K.open&&/^(calc|comp|aver|glos|seg|busca)$/.test(K.tab)) hit('ct_'+K.tab); });
+  wrap('renderStart',()=>{ const s=G('stSel'), N=G('NAV'); if(s&&s.mode==='train'&&!(N&&N.gal)) hit('escuela'); });
+  // calculadoras: cuenta la que se usa de verdad (al escribir un dato), no la que sale abierta por defecto
+  const calc=e=>{ const K=G('KT'); if(K&&K.open&&K.tab==='calc'&&K.cur&&e.target&&e.target.closest&&e.target.closest('#kt .kt-main')) hit('calc_'+K.cur); };
+  document.addEventListener('input',calc,true); document.addEventListener('change',calc,true);
+  document.addEventListener('click',e=>{ const t=e.target&&e.target.closest?e.target:null; if(!t) return; if(t.closest('.ac-b')) hit('cuenta_google'); if(t.closest('#v3btn')) hit('sim_3d'); },true);
+  try{ new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{ if(n.id==='bz') hit('sugerencias'); }))).observe(document.body,{childList:true}); }catch(e){}
+  setTimeout(visita,1500);
+})();
 
 // ===== idioma: selector en las pantallas de inicio y palabras clave en euskera =====
 (function(){ const _rs=renderStart; renderStart=function(){ _rs.apply(this,arguments); document.querySelectorAll('#stBody .q1-top').forEach(h=>{ if(h.querySelector('.lang-sw')) return; h.appendChild(i18nToggle()); }); }; })();
